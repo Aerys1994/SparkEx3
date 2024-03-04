@@ -5,6 +5,9 @@ object Main {
     val spark = SparkSessionProvider.createSparkSession("Spark")
     spark.sparkContext.setLogLevel("ERROR")
 
+   // ParquetSaver.execute(spark)
+    Analysis.execute(spark)
+
 
     spark.stop()
 
